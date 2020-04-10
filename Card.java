@@ -117,12 +117,12 @@ class Card {
   }
 
   // Compares if this card is greater than the other card.
-  // First considers the suit, if both cards have the same suit, considers the card value
+  // First considers the suit, if both cards have the same suit, considers the card value.
   //
   // @param[in] other_card  The other card.
-  // @return    1  if this card is greater than the other card
-  //            -1 if this card is smaller than the other card
-  //            0  if both cards are equal
+  // @return    1  if this card is greater than the other card.
+  //            -1 if this card is smaller than the other card.
+  //            0  if both cards are equal.
   public int compare_to(Card other_card) {
     if (suit_is_less_than(other_card)) {
       return -1;
