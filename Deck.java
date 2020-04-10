@@ -29,8 +29,28 @@ class Deck
     }
   }
   
-  public void deal_hand( int sets, int cards ) 
-  {}
+  /**
+   * Deals the cards in the given number of sets and cards.
+   * If the total number goes beyond the total number of cards (52), it will strat over.
+   *
+   * @param sets  number of sets
+   * @param cards number of cards in each set
+   */
+  public void deal_hand( int sets, int cards ) {
+    int index = 0;
+    for (int set = 0; set < sets; set++) {
+      System.out.print("Set " + (set + 1) + " ");
+      for (int card = 0; card < cards; card++) {
+        all_cards.get(index).print();
+        index++;
+
+        if (index == all_cards.size()) {
+          index = 0;
+        }
+      }
+      System.out.print("\n");
+    }
+  }
   
   // prints the whole deck in four sets, each with 13 cards
   public void print_deck() {

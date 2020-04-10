@@ -32,7 +32,7 @@ class Main {
     System.out.print("\n=== Suffle and deal again ==============================\n");
     deck.shuffle(99);  // use a seed value of 99
     deck.deal_hand(3,5);
-    
+
     System.out.println();
   }
 }
