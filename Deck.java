@@ -30,8 +30,15 @@ class Deck
   public void deal_hand( int sets, int cards ) 
   {}
   
-  public void print_deck() 
-  {}
+  // prints the whole deck in four sets, each with 13 cards
+  public void print_deck() {
+    for (int i = 0; i < all_cards.size(); i++) {
+      if (i % 13 == 0) { // there are 13 cards in each set
+        System.out.print("\n");
+      }
+      all_cards.get(i).print();
+    }
+  }
   
   public void shuffle( int seed ) 
   {}
