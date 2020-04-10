@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 /**
  * Deck.java
@@ -40,8 +42,12 @@ class Deck
     }
   }
   
-  public void shuffle( int seed ) 
-  {}
+  // shuffles the list of cards by a given seed value
+  //
+  // param[in]  seed  seed value for the random function to make it testable and deterministic
+  public void shuffle( int seed ) {
+    Collections.shuffle(all_cards, new Random(seed));
+  }
   
   public void sort() 
   {}
